@@ -14,7 +14,7 @@ import ManageStudentsPage from "../features/courses/pages/ManageStudentsPage";
 import CurriculumBuilderPage from "../features/curriculum/pages/CurriculumBuilderPage";
 import CategoryManagementPage from "../features/categories/pages/CategoryManagementPage";
 import AnalyticsDashboardPage from "../features/analytics/pages/AnalyticsDashboardPage";
-
+import CreateCategoryPage from "../features/categories/pages/CreateCategoryPage";
 export default function AppRoutes() {
   return (
     <Routes>
@@ -29,6 +29,10 @@ export default function AppRoutes() {
         <Route path="/courses/:id/curriculum" element={<CurriculumBuilderPage />} />
 
         <Route path="/categories" element={<CategoryManagementPage />} />
+        <Route
+           path="/categories/create"
+           element={<CreateCategoryPage />}
+        />
         <Route path="/analytics" element={<AnalyticsDashboardPage />} />
 
         <Route
