@@ -1,8 +1,6 @@
 package com.lms.modules.content.controller;
 
-
 import lombok.RequiredArgsConstructor;
-
 import org.springframework.web.bind.annotation.*;
 
 import com.lms.modules.content.entity.Content;
