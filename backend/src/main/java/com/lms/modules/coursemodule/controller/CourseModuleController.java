@@ -9,7 +9,7 @@ import com.lms.modules.coursemodule.service.CourseModuleService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/modules")
+@RequestMapping("/api/coursemodules")
 @RequiredArgsConstructor
 public class CourseModuleController {
 

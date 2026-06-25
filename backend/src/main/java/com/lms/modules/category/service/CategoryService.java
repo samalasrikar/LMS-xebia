@@ -1,6 +1,5 @@
 package com.lms.modules.category.service;
 
-
 import java.util.List;
 
 import org.springframework.stereotype.Service;
@@ -25,13 +24,19 @@ public class CategoryService {
     }
 
     public Category getById(Long id) {
-        return repository.findById(id).orElseThrow();
+        return repository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Category not found"));
     }
 
     public Category update(Long id, Category updated) {
+
         Category category = getById(id);
 
         category.setName(updated.getName());
+        category.setIcon(updated.getIcon());
+        category.setDescription(updated.getDescription());
+        category.setColor(updated.getColor());
+        category.setIsActive(updated.getIsActive());
 
         return repository.save(category);
     }
